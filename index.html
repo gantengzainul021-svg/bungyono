@@ -101,7 +101,7 @@
 
   /* ===== COMMENTS ===== */
   .comments {
-    position: fixed; left: 14px; right: 80px; bottom: 150px; z-index: 8;
+    position: fixed; left: 14px; right: 80px; bottom: 160px; z-index: 8;
     display: flex; flex-direction: column; gap: 8px;
     pointer-events: none;
     mask-image: linear-gradient(to top, black 60%, transparent 100%);
@@ -126,9 +126,9 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ===== SIDE ACTIONS — turun biar gak ketutupan banner ===== */
+  /* ===== SIDE ACTIONS ===== */
   .side-actions {
-    position: fixed; right: 14px; bottom: 90px; z-index: 9;
+    position: fixed; right: 14px; bottom: 100px; z-index: 9;
     display: flex; flex-direction: column; gap: 14px; align-items: center;
   }
   .action {
@@ -145,7 +145,7 @@
   }
   .action .heart { color: #ff2d55; }
 
-  /* ===== CENTER BANNER — lebih ramping ===== */
+  /* ===== CENTER BANNER ===== */
   .center-actions {
     position: fixed; top: 42%; left: 50%;
     transform: translate(-50%, -50%);
@@ -157,9 +157,7 @@
     background: rgba(20, 0, 30, 0.42);
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 14px;
-    box-shadow:
-      0 8px 32px rgba(0,0,0,0.55),
-      inset 0 1px 0 rgba(255,255,255,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.12);
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(12px) saturate(140%);
     pointer-events: none;
@@ -171,140 +169,98 @@
     background: rgba(255,0,60,0.20);
     border: 1px solid rgba(255,0,60,0.45);
     border-radius: 9px; padding: 6px 9px; color: #ffe0e8;
-    margin-bottom: 2px;
-    width: 100%;
+    margin-bottom: 2px; width: 100%;
   }
   .notice-center strong { color: #ff2d55; }
 
-  /* Tombol VIP — kecil, 3D */
+  /* Tombol VIP */
   .btn-vip {
-    display: block;
-    width: 100%;
-    padding: 9px 12px;
-    border-radius: 10px;
+    display: block; width: 100%; padding: 9px 12px; border-radius: 10px;
     background: linear-gradient(180deg, #d43cff 0%, #b400ff 45%, #ae00ff 100%);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.3px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    box-shadow:
-      0 4px 0 #6b0099,
-      0 6px 12px rgba(0,0,0,0.5),
-      inset 0 1px 0 rgba(255,255,255,0.35),
-      inset 0 -2px 6px rgba(0,0,0,0.25);
-    transform: translateY(0);
-    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
+    text-align: center; text-transform: uppercase; text-decoration: none;
+    border: none; cursor: pointer; position: relative;
+    box-shadow: 0 4px 0 #6b0099, 0 6px 12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 6px rgba(0,0,0,0.25);
+    transform: translateY(0); transition: transform 0.08s ease, box-shadow 0.08s ease;
   }
-  .btn-vip:active,
-  .btn-vip.pressed {
-    transform: translateY(4px);
-    box-shadow:
-      0 0 0 #6b0099,
-      0 2px 6px rgba(0,0,0,0.4),
-      inset 0 1px 0 rgba(255,255,255,0.2),
-      inset 0 -1px 4px rgba(0,0,0,0.35);
-  }
+  .btn-vip:active { transform: translateY(4px); box-shadow: 0 0 0 #6b0099, 0 2px 6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 4px rgba(0,0,0,0.35); }
   .btn-vip::before {
-    content: '';
-    position: absolute;
-    top: 2px; left: 8px; right: 8px;
-    height: 40%;
+    content: ''; position: absolute; top: 2px; left: 8px; right: 8px; height: 40%;
     background: linear-gradient(180deg, rgba(255,255,255,0.35), transparent);
-    border-radius: 8px 8px 50% 50% / 8px 8px 100% 100%;
-    pointer-events: none;
+    border-radius: 8px 8px 50% 50% / 8px 8px 100% 100%; pointer-events: none;
   }
 
-  /* Tombol Chat — kecil, 3D */
+  /* Tombol Chat */
   .btn-chat {
-    display: block;
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 10px;
+    display: block; width: 100%; padding: 8px 12px; border-radius: 10px;
     background: linear-gradient(180deg, #00b106 0%, #00d607 50%, #00b106 100%);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    position: relative;
-    box-shadow:
-      0 3px 0 #0d0d12,
-      0 5px 10px rgba(0,0,0,0.5),
-      inset 0 1px 0 rgba(255,255,255,0.15);
-    transform: translateY(0);
-    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 11px;
+    font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; text-align: center; position: relative;
+    box-shadow: 0 3px 0 #0d0d12, 0 5px 10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+    transform: translateY(0); transition: transform 0.08s ease, box-shadow 0.08s ease;
   }
-  .btn-chat:active,
-  .btn-chat.pressed {
-    transform: translateY(3px);
-    box-shadow:
-      0 0 0 #0d0d12,
-      0 2px 4px rgba(0,0,0,0.4),
-      inset 0 1px 0 rgba(255,255,255,0.1);
-  }
+  .btn-chat:active { transform: translateY(3px); box-shadow: 0 0 0 #0d0d12, 0 2px 4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1); }
 
   /* ===== BOTTOM COMMENT BOX ===== */
   .bottom-area {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 15;
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 99;
     padding: 10px 12px;
-    padding-bottom: max(10px, env(safe-area-inset-bottom));
-    background: linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.6) 60%, transparent);
+    /* INI KUNCINYA: Naikin kolom komentar di HP biar gak ketutup navbar browser */
+    padding-bottom: max(30px, calc(15px + env(safe-area-inset-bottom))); 
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6) 60%, transparent);
     display: flex; flex-direction: column; align-items: center;
+    transition: bottom 0.3s ease;
   }
+  
   .comment-box {
     display: flex; gap: 6px; width: 100%; max-width: 480px;
   }
   .comment-box input {
-    flex: 1;
-    padding: 9px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: rgba(255,255,255,0.1);
-    color: #fff;
-    font-size: 12.5px;
-    outline: none;
+    flex: 1; padding: 9px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1); color: #fff; font-size: 12.5px; outline: none;
   }
   .comment-box input::placeholder { color: rgba(255,255,255,0.55); }
   .comment-box button {
-    padding: 9px 16px;
-    border-radius: 20px;
-    border: none;
+    padding: 9px 16px; border-radius: 20px; border: none;
     background: linear-gradient(180deg, #ff2d55, #d6003c);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
+    color: #fff; font-size: 12px; font-weight: 700; cursor: pointer;
     box-shadow: 0 3px 0 #8a0028;
   }
   .comment-box button:active { transform: translateY(3px); box-shadow: 0 0 0 #8a0028; }
 
-  @media (max-height: 600px) {
-    .comments { bottom: 120px; }
-    .side-actions { bottom: 70px; gap: 10px; }
-    .center-actions { top: 40%; max-width: 230px; padding: 8px 8px; }
+  /* Class bantuan saat keyboard aktif di HP */
+  body.keyboard-open .bottom-area {
+    bottom: 250px; /* Naik pas keyboard muncul */
+    background: transparent;
+  }
+
+  /* HP Kecil */
+  @media (max-height: 650px) {
+    .comments { bottom: 140px; }
+    .side-actions { bottom: 80px; gap: 10px; }
+    .center-actions { top: 38%; max-width: 230px; padding: 8px; }
     .btn-vip { padding: 7px 10px; font-size: 11px; }
     .btn-chat { padding: 6px 10px; font-size: 10px; }
     .notice-center { font-size: 9.5px; padding: 5px 7px; }
   }
+  
   @media (min-width: 768px) {
-    .comments { right: 100px; bottom: 170px; }
+    .comments { right: 100px; bottom: 190px; }
     .comment { font-size: 14px; padding: 9px 14px; }
-    .side-actions { bottom: 110px; }
+    .side-actions { bottom: 130px; }
     .center-actions { max-width: 320px; padding: 12px 12px; top: 45%; }
     .btn-vip { max-width: 100%; font-size: 13px; }
     .btn-chat { max-width: 100%; font-size: 12px; }
     .comment-box { max-width: 520px; }
+    /* Di PC, balikin ke bawah */
+    .bottom-area { padding-bottom: 15px; } 
   }
+  
   @keyframes fly {
     to { transform: translateY(-120px) scale(1.5); opacity: 0; }
   }
@@ -314,10 +270,7 @@
 
 <h1 class="sr-only">Private Live Stream — Join VIP</h1>
 
-<video class="video-bg" id="bgVideo" autoplay muted loop playsinline aria-hidden="true"
-       poster="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1080">
-</video>
-
+<video class="video-bg" id="bgVideo" autoplay muted loop playsinline aria-hidden="true"></video>
 <div class="overlay"></div>
 
 <!-- TOP BAR -->
@@ -351,18 +304,12 @@
     🔴 <strong>My private live stream is happening right now.</strong><br>
     Join the VIP room to watch the full uncut stream before it ends.
   </div>
-
-  <a class="btn-vip" id="vipBtn" href="#" target="_blank" rel="noopener">
-    🎬 UNLOCK FULL STREAM 🎬
-  </a>
-
-  <a class="btn-chat" id="chatBtn" href="#" target="_blank" rel="noopener">
-    📩 Chat Me 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩
-  </a>
+  <a class="btn-vip" id="vipBtn" href="#" target="_blank" rel="noopener">🎬 UNLOCK FULL STREAM 🎬</a>
+  <a class="btn-chat" id="chatBtn" href="#" target="_blank" rel="noopener">📩 Chat Me 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩</a>
 </div>
 
 <!-- BOTTOM COMMENT BOX -->
-<div class="bottom-area">
+<div class="bottom-area" id="bottomArea">
   <form class="comment-box" id="commentForm" autocomplete="off">
     <input type="text" id="commentInput" placeholder="Add a comment..." maxlength="120" required>
     <button type="submit">Kirim</button>
@@ -370,85 +317,52 @@
 </div>
 
 <script>
-  /* ==========================================================
-     ⚙️ SHINZY_CONFIG — ISI LINK LU DI SINI (CUMA DI SINI)
-     ========================================================== */
   const SHINZY_CONFIG = {
-    CPA_LINK: 'https://room.pvtlive.com/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=252826&s2=2268918&click_id=bung',
-    CHAT_LINK: 'https://room.pvtlive.com/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=252826&s2=2268918&click_id=bung1',
-    COMMENT_LINK: 'https://room.pvtlive.com/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=252826&s2=2268918&click_id=bung2'
+    CPA_LINK: 'https://room.pvtlive.com/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=252826&s2=2268918&click_id=bung-1',
+    CHAT_LINK: 'https://room.pvtlive.com/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=252826&s2=2268918&click_id=bung-2',
+    COMMENT_LINK: 'https://room.pvtlive.com/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=252826&s2=2268918&click_id=bung-3'
   };
-  /* ========================================================== */
 
-  // Pasang link ke tombol
   document.getElementById('vipBtn').href = SHINZY_CONFIG.CPA_LINK;
   document.getElementById('chatBtn').href = SHINZY_CONFIG.CHAT_LINK;
 
-  /* ===== I18N ===== */
+  /* ===== TRIK ANTI-KEYBOARD HP ===== */
+  const inputKomentar = document.getElementById('commentInput');
+  
+  inputKomentar.addEventListener('focus', () => {
+    document.body.classList.add('keyboard-open');
+    // Paksa scroll ke paling bawah biar form kelihatan
+    setTimeout(() => { 
+      window.scrollTo(0, document.body.scrollHeight); 
+      document.getElementById('bottomArea').scrollIntoView({behavior: "smooth", block: "end"});
+    }, 100);
+  });
+  
+  inputKomentar.addEventListener('blur', () => {
+    document.body.classList.remove('keyboard-open');
+  });
+
+  /* ===== I18N (TETAP SEPERTI SEBELUMNYA) ===== */
   const SHINZY_I18N = {
     en: {
       noticeStrong: 'My private live stream is happening right now.',
       noticeText: 'Join the VIP room to watch the full uncut stream before it ends.',
-      vipBtn: '🎬 UNLOCK FULL STREAM 🎬',
-      chatBtn: '📩 Chat Me 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Share', joinedVip: 'joined the VIP room',
-      placeholder: 'Add a comment...', send: 'Send',
+      vipBtn: '🎬 UNLOCK FULL STREAM 🎬', chatBtn: '📩 Chat Me 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
+      share: 'Share', joinedVip: 'joined the VIP room', placeholder: 'Add a comment...', send: 'Send',
       comments: ['is this the vip room?','how do i join vip?','finally live again 🔥','link pls','stream quality is insane','just joined vip, worth it','omg i made it in time','where is the vip link??','this is so good','waiting for the vip drop','can everyone see this?','vip room going crazy rn','best stream tonight fr','someone drop the link','im already inside vip 😎','how long is this live?','vip access please','not missing this one','this is fire 🔥🔥','who else is here?','tell me how to get in','vip members only right?','stayed up just for this','this stream is unreal','drop the vip link bro']
     },
     de: {
       noticeStrong: 'Mein privater Live-Stream läuft gerade.',
       noticeText: 'Komm in den VIP-Raum, um den vollen uncut Stream zu sehen, bevor er endet.',
-      vipBtn: '🎬 GANZEN STREAM FREISCHALTEN 🎬',
-      chatBtn: '📩 Schreib mir auf 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Teilen', joinedVip: 'ist dem VIP-Raum beigetreten',
-      placeholder: 'Kommentar hinzufügen...', send: 'Senden',
+      vipBtn: '🎬 GANZEN STREAM FREISCHALTEN 🎬', chatBtn: '📩 Schreib mir auf 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
+      share: 'Teilen', joinedVip: 'ist dem VIP-Raum beigetreten', placeholder: 'Kommentar hinzufügen...', send: 'Senden',
       comments: ['ist das der vip raum?','wie komme ich rein?','endlich wieder live 🔥','link bitte','qualität ist der wahnsinn','bin gerade vip geworden, lohnt sich','omg ich hab es geschafft','wo ist der vip link??','das ist so gut','warte auf den vip drop','kann das jeder sehen?','vip raum ist verrückt gerade','bester stream heute','jemand den link bitte','ich bin schon drin 😎','wie lange geht das live?','vip zugang bitte','das darf ich nicht verpassen','das ist feuer 🔥🔥','wer ist noch hier?','sag mir wie ich reinkomme','nur für vip mitglieder oder?','bin extra wach geblieben','dieser stream ist unglaublich','schick den vip link']
     },
-    es: {
-      noticeStrong: 'Mi transmisión privada en vivo está sucediendo ahora.',
-      noticeText: 'Únete a la sala VIP para ver la transmisión completa sin cortes antes de que termine.',
-      vipBtn: '🎬 DESBLOQUEAR STREAM COMPLETO 🎬',
-      chatBtn: '📩 Escríbeme por 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Compartir', joinedVip: 'se unió a la sala VIP',
-      placeholder: 'Añadir un comentario...', send: 'Enviar',
-      comments: ['¿es esta la sala vip?','¿cómo entro al vip?','por fin en vivo otra vez 🔥','link porfa','la calidad está increíble','acabo de entrar al vip, vale la pena','omg llegué a tiempo','¿dónde está el link vip?','esto está buenísimo','esperando el drop vip','¿todos pueden ver esto?','la sala vip está loca ahora','el mejor stream de la noche','alguien pase el link','ya estoy dentro 😎','¿cuánto dura el live?','acceso vip porfa','no me lo pierdo','esto es fuego 🔥🔥','¿quién más está aquí?','dime cómo entrar','solo miembros vip, ¿no?','me quedé despierto por esto','este stream es irreal','pasa el link vip']
-    },
-    fr: {
-      noticeStrong: 'Mon live privé est en cours en ce moment.',
-      noticeText: 'Rejoins la salle VIP pour voir le stream complet sans coupure avant la fin.',
-      vipBtn: '🎬 DÉBLOQUER LE STREAM COMPLET 🎬',
-      chatBtn: '📩 Écris-moi sur 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Partager', joinedVip: 'a rejoint la salle VIP',
-      placeholder: 'Ajouter un commentaire...', send: 'Envoyer',
-      comments: ['c\'est la salle vip ?','comment rejoindre le vip ?','enfin de retour en live 🔥','lien svp','la qualité est folle','je viens de rejoindre le vip, ça vaut le coup','omg j\'ai réussi à temps','où est le lien vip ??','c\'est trop bien','j\'attends le drop vip','tout le monde peut voir ça ?','la salle vip est en folie','meilleur stream de la nuit','quelqu\'un passe le lien','je suis déjà dedans 😎','ça dure combien de temps ?','accès vip svp','je ne rate pas ça','c\'est du feu 🔥🔥','qui est là ?','dis-moi comment entrer','réservé aux vip non ?','je me suis couché tard pour ça','ce stream est irréel','passe le lien vip']
-    },
-    it: {
-      noticeStrong: 'La mia diretta privata è in corso proprio ora.',
-      noticeText: 'Entra nella VIP room per vedere lo stream completo senza tagli prima che finisca.',
-      vipBtn: '🎬 SBLOCCA LO STREAM COMPLETO 🎬',
-      chatBtn: '📩 Scrivimi su 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Condividi', joinedVip: 'è entrato nella VIP room',
-      placeholder: 'Aggiungi un commento...', send: 'Invia',
-      comments: ['è questa la vip room?','come entro nel vip?','finalmente di nuovo live 🔥','link pls','qualità assurda','appena entrato nel vip, ne vale la pena','omg ce l\'ho fatta in tempo','dov\'è il link vip??','è troppo bello','aspettando il drop vip','lo possono vedere tutti?','la vip room è impazzita','miglior stream della notte','qualcuno passi il link','sono già dentro 😎','quanto dura la live?','accesso vip pls','non me lo perdo','è fuoco 🔥🔥','chi altro è qui?','dimmi come entrare','solo membri vip vero?','sono rimasto sveglio per questo','questo stream è irreale','passa il link vip']
-    },
-    pt: {
-      noticeStrong: 'Minha live privada está acontecendo agora.',
-      noticeText: 'Entre na sala VIP para assistir ao stream completo sem cortes antes que acabe.',
-      vipBtn: '🎬 DESBLOQUEAR STREAM COMPLETO 🎬',
-      chatBtn: '📩 Fale comigo no 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Compartilhar', joinedVip: 'entrou na sala VIP',
-      placeholder: 'Adicionar um comentário...', send: 'Enviar',
-      comments: ['é essa a sala vip?','como entro no vip?','finalmente ao vivo de novo 🔥','link pfv','qualidade insana','acabei de entrar no vip, vale a pena','omg cheguei a tempo','cadê o link vip??','isso é bom demais','esperando o drop vip','todo mundo pode ver isso?','a sala vip tá louca agora','melhor stream da noite','alguém manda o link','já estou dentro 😎','quanto tempo dura a live?','acesso vip pfv','não perco isso','isso é fogo 🔥🔥','quem mais tá aqui?','me diz como entrar','só membros vip né?','fiquei acordado por isso','esse stream é surreal','manda o link vip']
-    },
-    nl: {
-      noticeStrong: 'Mijn privé livestream is nu bezig.',
-      noticeText: 'Kom in de VIP-room om de volledige uncut stream te zien voordat hij eindigt.',
-      vipBtn: '🎬 VOLLEDIGE STREAM ONTGRENDELEN 🎬',
-      chatBtn: '📩 Chat met me op 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩',
-      share: 'Delen', joinedVip: 'is lid geworden van de VIP-room',
-      placeholder: 'Reactie toevoegen...', send: 'Versturen',
-      comments: ['is dit de vip room?','hoe join ik vip?','eindelijk weer live 🔥','link alsjeblieft','kwaliteit is gestoord','net vip geworden, waard','omg ik was op tijd','waar is de vip link??','dit is zo goed','wachten op de vip drop','kan iedereen dit zien?','vip room gaat los nu','beste stream vanavond','iemand stuur de link','ik ben al binnen 😎','hoe lang duurt de live?','vip toegang alsjeblieft','dit mis ik niet','dit is vuur 🔥🔥','wie is hier nog?','zeg me hoe ik binnenkom','alleen vip leden toch?','ben wakker gebleven hiervoor','deze stream is onwerkelijk','stuur de vip link']
-    }
+    es: { noticeStrong: 'Mi transmisión privada en vivo está sucediendo ahora.', noticeText: 'Únete a la sala VIP para ver la transmisión completa sin cortes antes de que termine.', vipBtn: '🎬 DESBLOQUEAR STREAM COMPLETO 🎬', chatBtn: '📩 Escríbeme por 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩', share: 'Compartir', joinedVip: 'se unió a la sala VIP', placeholder: 'Añadir un comentario...', send: 'Enviar', comments: ['¿es esta la sala vip?','¿cómo entro al vip?','por fin en vivo otra vez 🔥','link porfa','la calidad está increíble','acabo de entrar al vip, vale la pena','omg llegué a tiempo','¿dónde está el link vip?','esto está buenísimo','esperando el drop vip','¿todos pueden ver esto?','la sala vip está loca ahora','el mejor stream de la noche','alguien pase el link','ya estoy dentro 😎','¿cuánto dura el live?','acceso vip porfa','no me lo pierdo','esto es fuego 🔥🔥','¿quién más está aquí?','dime cómo entrar','solo miembros vip, ¿no?','me quedé despierto por esto','este stream es irreal','pasa el link vip'] },
+    fr: { noticeStrong: 'Mon live privé est en cours en ce moment.', noticeText: 'Rejoins la salle VIP pour voir le stream complet sans coupure avant la fin.', vipBtn: '🎬 DÉBLOQUER LE STREAM COMPLET 🎬', chatBtn: '📩 Écris-moi sur 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩', share: 'Partager', joinedVip: 'a rejoint la salle VIP', placeholder: 'Ajouter un commentaire...', send: 'Envoyer', comments: ['c\'est la salle vip ?','comment rejoindre le vip ?','enfin de retour en live 🔥','lien svp','la qualité est folle','je viens de rejoindre le vip, ça vaut le coup','omg j\'ai réussi à temps','où est le lien vip ??','c\'est trop bien','j\'attends le drop vip','tout le monde peut voir ça ?','la salle vip est en folie','meilleur stream de la nuit','quelqu\'un passe le lien','je suis déjà dedans 😎','ça dure combien de temps ?','accès vip svp','je ne rate pas ça','c\'est du feu 🔥🔥','qui est là ?','dis-moi comment entrer','réservé aux vip non ?','je me suis couché tard pour ça','ce stream est irréel','passe le lien vip'] },
+    it: { noticeStrong: 'La mia diretta privata è in corso proprio ora.', noticeText: 'Entra nella VIP room per vedere lo stream completo senza tagli prima che finisca.', vipBtn: '🎬 SBLOCCA LO STREAM COMPLETO 🎬', chatBtn: '📩 Scrivimi su 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩', share: 'Condividi', joinedVip: 'è entrato nella VIP room', placeholder: 'Aggiungi un commento...', send: 'Invia', comments: ['è questa la vip room?','come entro nel vip?','finalmente di nuovo live 🔥','link pls','qualità assurda','appena entrato nel vip, ne vale la pena','omg ce l\'ho fatta in tempo','dov\'è il link vip??','è troppo bello','aspettando il drop vip','lo possono vedere tutti?','la vip room è impazzita','miglior stream della notte','qualcuno passi il link','sono già dentro 😎','quanto dura la live?','accesso vip pls','non me lo perdo','è fuoco 🔥🔥','chi altro è qui?','dimmi come entrare','solo membri vip vero?','sono rimasto sveglio per questo','questo stream è irreale','passa il link vip'] },
+    pt: { noticeStrong: 'Minha live privada está acontecendo agora.', noticeText: 'Entre na sala VIP para assistir ao stream completo sem cortes antes que acabe.', vipBtn: '🎬 DESBLOQUEAR STREAM COMPLETO 🎬', chatBtn: '📩 Fale comigo no 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩', share: 'Compartilhar', joinedVip: 'entrou na sala VIP', placeholder: 'Adicionar um comentário...', send: 'Enviar', comments: ['é essa a sala vip?','como entro no vip?','finalmente ao vivo de novo 🔥','link pfv','qualidade insana','acabei de entrar no vip, vale a pena','omg cheguei a tempo','cadê o link vip??','isso é bom demais','esperando o drop vip','todo mundo pode ver isso?','a sala vip tá louca agora','melhor stream da noite','alguém manda o link','já estou dentro 😎','quanto tempo dura a live?','acesso vip pfv','não perco isso','isso é fogo 🔥🔥','quem mais tá aqui?','me diz como entrar','só membros vip né?','fiquei acordado por isso','esse stream é surreal','manda o link vip'] },
+    nl: { noticeStrong: 'Mijn privé livestream is nu bezig.', noticeText: 'Kom in de VIP-room om de volledige uncut stream te zien voordat hij eindigt.', vipBtn: '🎬 VOLLEDIGE STREAM ONTGRENDELEN 🎬', chatBtn: '📩 Chat met me op 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 📩', share: 'Delen', joinedVip: 'is lid geworden van de VIP-room', placeholder: 'Reactie toevoegen...', send: 'Versturen', comments: ['is dit de vip room?','hoe join ik vip?','eindelijk weer live 🔥','link alsjeblieft','kwaliteit is gestoord','net vip geworden, waard','omg ik was op tijd','waar is de vip link??','dit is zo goed','wachten op de vip drop','kan iedereen dit zien?','vip room gaat los nu','beste stream vanavond','iemand stuur de link','ik ben al binnen 😎','hoe lang duurt de live?','vip toegang alsjeblieft','dit mis ik niet','dit is vuur 🔥🔥','wie is hier nog?','zeg me hoe ik binnenkom','alleen vip leden toch?','ben wakker gebleven hiervoor','deze stream is onwerkelijk','stuur de vip link'] }
   };
 
   function SHINZY_DETECT_LANG() {
@@ -554,6 +468,5 @@
   setInterval(SHINZYJoinNotif, 6500);
   setTimeout(SHINZYComment, 900);
 </script>
-
 </body>
 </html>
